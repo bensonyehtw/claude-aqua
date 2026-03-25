@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm list:*)",
+      "Bash(npm view:*)",
+      "Bash(npm -v)",
+      "Bash(npx tsc:*)",
+      "Bash(find /d/claude-aqua/src -type f \\\\\\(-name *.ts -o -name *.tsx \\\\\\))",
+      "Bash(timeout 5 npx tsx src/index.tsx)"
+    ]
+  }
+}

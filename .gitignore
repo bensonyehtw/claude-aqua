@@ -1,0 +1,5 @@
+node_modules/
+dist/
+aquarium-save.json
+aquarium-save.json.bak
+*.log
