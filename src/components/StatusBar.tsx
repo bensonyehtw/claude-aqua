@@ -83,8 +83,6 @@ export function StatusBar({ state, view, notification, width }: StatusBarProps) 
               <Text>nfo </Text>
               <Text color="yellowBright">[D]</Text>
               <Text>eco </Text>
-              <Text color="yellowBright">[R]</Text>
-              <Text>esync </Text>
               <Text color="yellowBright">[Q]</Text>
               <Text>uit</Text>
             </Text>

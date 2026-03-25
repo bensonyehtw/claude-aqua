@@ -642,24 +642,6 @@ export function App() {
     };
   }, [stdout]);
 
-  // Resync handler
-  const handleResync = useCallback(async () => {
-    try {
-      const result = await scanClaudeActivity(0);
-      dispatch({
-        type: "SYNC_STATS",
-        stats: {
-          totalConversations: result.totalConversations,
-          totalToolUses: result.totalToolUses,
-          totalMessages: result.totalMessages,
-        },
-        expGained: result.expGained,
-        offset: result.newOffset,
-      });
-    } catch {
-      dispatch({ type: "SET_NOTIFICATION", message: "Resync failed" });
-    }
-  }, []);
 
   // Keyboard
   useInput((input, key) => {
@@ -692,10 +674,6 @@ export function App() {
       if (input === "t" || input === "T") {
         process.stdout.write("\x1b[2J\x1b[H");
         dispatch({ type: "SET_VIEW", view: "stats" });
-        return;
-      }
-      if (input === "r" || input === "R") {
-        handleResync();
         return;
       }
     } else {
