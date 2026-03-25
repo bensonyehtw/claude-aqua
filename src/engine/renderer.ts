@@ -435,12 +435,6 @@ export function renderStatusToAnsi(
         "stats " +
         RESET +
         (ANSI_COLORS["yellowBright"] ?? "") +
-        "[R]" +
-        RESET +
-        (ANSI_COLORS["white"] ?? "") +
-        "esync " +
-        RESET +
-        (ANSI_COLORS["yellowBright"] ?? "") +
         "[Q]" +
         RESET +
         (ANSI_COLORS["white"] ?? "") +
